@@ -1,0 +1,694 @@
+<!doctype html>
+
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3.0">
+    <title>jinuk</title>
+   
+    <style type="text/css"></style>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+    <script type="text/javascript"></script>
+    <link rel="stylesheet" as="style" crossorigin
+        href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=density_large" />
+<style>
+    @charset "utf-8";
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap");
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200");
+
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+    word-break: keep-all;
+}
+
+.material-symbols-outlined{
+   
+}
+
+
+
+body {
+    font-family: "Pretendard Variable", sans-serif;
+    font-size: 0.9rem;
+    line-height: 1.3rem;
+    color: #1a1a1a;
+    letter-spacing: 0.1px;
+}
+
+h1,
+h2,
+h3 {
+    font-family: "Pretendard Variable", sans-serif;
+}
+
+h1 {
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+    font-weight: 300;
+}
+
+h2 {
+    font-size: 1.7rem;
+    line-height: 2rem;
+}
+
+h3 {
+    font-size: 1.4rem;
+    line-height: 1.5rem;
+    
+}
+
+h4,
+h5 {
+    font-family: "Pretendard Variable", sans-serif;}
+
+h4 {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+h5 {
+    font-size: 0.8rem;
+    line-height: 1.5rem;
+    font-weight: normal;
+}
+
+body{
+    font-size: 0.7rem;
+}
+
+small{
+    font-size: 0.6rem;
+    line-height: 0.7rem;
+    padding: 10px 0;
+    color: #333;
+
+}
+strong{
+    font-weight: 600;
+}
+
+a:link {
+    color: #555;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #666;
+}
+
+a:hover {
+    color: #05507D;
+}
+
+a:active {
+    color: red;
+}
+
+button {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    padding: 10px 20px;
+     border: 1px solid white;
+    background: rgba(0, 0,0,0);
+    color: white;
+   
+}
+
+header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 15px 20px;
+    margin: 0 auto;
+    width: 100%;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    z-index: 1;
+
+}
+
+header span{
+    padding: 6px;
+    border-radius: 50%;
+    border: 1px solid white;
+    font-size: 20px;
+}
+
+header p{
+    display: inline;
+}
+
+header div>:first-child{
+
+    font-weight: 600;
+    border-bottom: 2px solid;
+    
+}
+
+header div{
+     display: flex;
+  justify-content: flex-end;
+}
+
+header img{
+  width: 70px;
+}
+
+main{
+    position: relative ;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+  
+}
+
+main video{
+   
+    width: 100%;
+    height: 100%; 
+    object-fit: cover; 
+    object-position: center; 
+}
+
+
+main button{
+    position: absolute;
+     top: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+    z-index: 2;
+    color: white;
+}
+
+.posco {
+    width: 100%;
+    height: 100vh; 
+    position: relative; 
+    overflow: hidden; 
+}
+
+.posco img {
+    width: 100%;
+    height: 100vh; 
+    object-fit: cover;     
+    object-position: center;
+ }
+
+.posco div{
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width:90% ;
+    padding:30px 15px 15px;
+    border-radius: 15px;
+    color: white;
+    margin: 0 auto;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.posco div>:nth-child(3){
+    display: none;
+}
+
+.posco div>button{
+    border: none;
+    font-weight: 900;
+    font-size: 1.25rem;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.posco div *{
+    margin-bottom: 15px;
+}
+
+footer{
+    padding: 50px 20px;
+    background: #f4f4f4;
+}
+
+footer>:nth-child(2){
+    display: flex;
+    line-height: 2rem;
+    gap: 30px;
+    margin-bottom: 40px;
+
+
+}
+
+footer ul li{
+    font-size: 1.2rem;
+}
+
+footer ul li a{
+     color: black;
+}
+
+footer div>:nth-child(1),
+footer div>:nth-child(2)>:nth-child(1){
+    font-weight: 700;
+}
+
+footer div ul:last-child li:not(:first-child) a{
+  font-size: 0.9rem;
+}
+
+footer div ul li a span{
+    display: inline-block;
+    background: url('https://www.posco.co.kr/docs/kor7/jsp/resources/images/common/ico_footer_link.png')
+    no-repeat;
+    width: 10px;
+    height: 10px;
+    margin-left: 5px;
+}
+
+footer> :nth-child(3){
+    display: flex;
+    gap: 15px;
+    margin-bottom: 30px;
+    
+}
+
+footer> :nth-child(3) img{
+ filter: invert(1) 
+            brightness(0.4);
+    
+}
+
+footer> :nth-child(3) :not(:first-child){
+    box-sizing: border-box;
+    width: 40px;
+    height: 40px;
+    padding: 8px;
+    text-align: center;
+    border: 1px solid #666;
+    border-radius: 50%;
+}
+
+footer> :nth-child(3)>:first-child{
+    box-sizing: border-box;
+    width: 100px;
+    height: 40px;
+    padding: 8px 30px;
+    text-align: center;
+    border: 1px solid #666;
+    border-radius: 30px;
+}
+
+footer select{
+    width:100%;
+    padding: 15px 20px;
+    margin-bottom: 20px;
+    appearance: none;
+    background: url(https://farm1.staticflickr.com/379/19928272501_4ef877c265_t.jpg) no-repeat 95% 50%;
+    border-color: #777;
+}
+
+footer> :nth-child(4)>:last-child{
+    width: 100px;
+}
+
+footer>div{
+    margin-bottom: 20px;
+}
+
+address{
+    border: 1px solid;
+    padding: 50px 20px 100px;
+    font-style: normal;
+    font-size: 0.8rem;
+    background: #444;
+    color: #ccc;
+
+}
+
+address ul{
+    margin-bottom: 30px;
+    gap: 20px;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+body address ul li a, 
+body address ul li a:visited {
+    color: #eee !important; 
+}
+
+aside{
+    position: fixed;
+    top: 0;
+    right: 0;
+}
+
+aside>:nth-child(1){
+   position: fixed;
+    top: 45%; 
+    right: 0; 
+    transform: translateY(-50%);
+
+}
+
+aside>:nth-child(1) img{
+    width: 90px;
+}
+aside>:nth-child(2) {
+    position: fixed;
+    top: 60% ;
+    margin-right: 20px;
+    width: 65px;
+    padding: 10px 2px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 30px;
+    border: 1px solid #999;
+}
+
+
+
+aside>:nth-child(2)>:nth-child(1) {
+    width: 30px;
+}
+
+aside>:nth-child(2) >:nth-child(3){
+    background: #555;
+    border-radius: 50%;
+    padding: 5px;
+}
+
+
+  @media screen and (min-width: 1366px){
+
+*{
+    border: px solid yellow;
+}
+
+    header{
+        padding: 10px 40px 0;
+    }
+    header img{
+        width: 120px;
+    }
+    header>:nth-child(3)>p{
+        font-size: 1rem;
+    }
+
+header> div{
+    width: 120px;
+}
+
+    header span{
+        box-sizing: border-box;
+    padding: 15px;
+    border-radius: 50%;
+    border: 1px solid white;
+    font-size: 35px;
+}
+
+main {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* 1. 오타 수정 (heiht -> height) */
+    overflow: hidden;
+}
+
+main video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* 2. 영상을 비율 깨짐 없이 화면에 꽉 채우는 핵심 속성 */
+    object-position: center;
+    
+    /* 3. 혹시 모를 랩탑 브라우저 버그 방지용 가로/세로 최소값 지정 */
+    min-width: 100%;
+    min-height: 100%;
+}
+
+main button{
+    position: absolute;
+     top: 90%;
+  left: 80%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  padding: 20px 40px  ; 
+    z-index: 2;
+    color: white;
+    font-size: 1rem;
+    font-weight: 800;
+}
+
+.posco{
+    position: relative;
+    display: flex;
+    align-items: center;
+    
+}
+
+.posco img{
+    width: 50%;
+    height: 100%;
+}
+
+.posco div{
+   position: static; 
+    transform: none;
+    
+    width: 50%; /* 오른쪽 절반 차지 */
+    padding: 0 10% 0 10%; /* 내부 여백을 주어 타이포그래피 공간 확보 */
+    box-sizing: border-box;
+    background: transparent; /* 모바일의 검은 배경 제거 */
+    color: #1a1a1a;
+}
+
+.posco div h2{
+    font-size: 3rem;
+    line-height: 4rem;
+    font-weight: 300;
+    margin-bottom: 50px;
+}
+
+.posco div p{
+    font-size: 1.25rem;
+    margin-bottom: 50px;
+}
+
+.posco>:nth-child(2)>:nth-child(3){
+    display: block;
+    padding: 0 0 10px ; 
+    color: #1a1a1a;
+    border-bottom: 1px solid #777;
+}
+.posco>:nth-child(2)>:nth-child(4){
+    display: none;
+}
+
+footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 50px 40px;
+    gap: 30px;
+    background: #f4f4f4;
+}
+
+footer>:nth-child(2)>:nth-child(2){
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        height: 250px;
+        width: 300px;
+        column-gap:60px;
+}
+
+footer>:nth-child(2){
+    gap: 60px;
+    margin-bottom: 30px;
+}
+footer div ul li a span{
+    width: 15px;
+    height: 15px;
+    margin-left: 5px;
+}
+
+footer>:nth-child(4){
+    display: flex;
+    flex-direction: column;
+  align-items: flex-end;
+  width: 300px;
+}
+
+address{
+  padding: 50px 40px;
+}
+
+address ul li{
+  font-size: 1rem ;
+}
+
+
+address p{
+    margin-bottom: 10px;
+}
+
+aside>:nth-child(1)
+{
+   position: fixed;
+    top: 45%; 
+    right: 0; 
+    transform: translateY(-50%);
+
+}
+
+aside :nth-child(1)>img{
+    width: 120px;
+}
+aside>:nth-child(2) {
+    margin: 0;
+    position: fixed; 
+  top:65%;
+  right: 20px;
+    margin-right: 20px;
+    width: 80px;
+    padding: 10px 2px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 40px;
+}
+
+aside>:nth-child(2) small{
+    font-size: 0.8rem;
+    line-height: 1rem;
+}
+
+aside>:nth-child(2)>:nth-child(1) {
+    width: 40px;
+}
+
+aside>:nth-child(2) >:nth-child(3){
+    background: #555;
+    border-radius: 50%;
+    padding: 20px;
+}
+  }
+</style>
+</head>
+
+<body>
+    <header>
+        <img src="https://www.posco.co.kr/docs/kor7/jsp/resources/images/common/logo_posoco.png">
+        <span class="material-symbols-outlined">
+            dehaze
+        </span>
+        <div>
+            <p>KOR</p>&nbsp;
+            <P>ENG</P>
+        </div>
+    </header>
+    <main>
+        <video autoplay loop muted playsinline>
+            <source src="https://www.posco.co.kr/docs/kor7/jsp/resources/video/POSCO_30sec_A.mp4" type="video/mp4">
+        </video>
+        <button>Full 영상 보러가기</button>
+    </main>
+
+    <article class="posco">
+
+        <img src="https://www.posco.co.kr/docs/kor7/jsp/resources/images/main/main_carbon_02.jpg">
+        <div>
+            <h2><strong>깨끗한 지구</strong>를 향한<br>
+                <strong>포스코</strong>의 도전
+            </h2>
+            <p><strong>탄소저감 생산체재 전환과 비즈니스 재편</strong>으로 경쟁력을 높이고 있습니다.</p>
+            <button>HyREX &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ></button>
+            <button>HyREX</button>
+        </div>
+
+    </article>
+    <footer>
+        <img src="https://www.posco.co.kr/docs/kor7/jsp/resources/images/common/logo_foot.jpg">
+        <div>
+            <ul>
+
+                <li><a href="#">회사소개</a></li>
+                <li><a href="#">제품<span></span></a></li>
+                <li><a href="#">지속가능경영<span></span></a></li>
+                <li><a href="#">재무정보</a></li>
+                <li><a href="#">홍보채널</a></li>
+
+            </ul>
+            <ul>
+                <li><a href="#">고객지원</a></li>
+                <li><a href="#">공지사항</a></li>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">문의하기</a></li>
+                <li><a href="#">업무별 연락처</a></li>
+                <li><a href="#">사이트맵</a></li>
+                <li><a href="#">일일방문신청<span></span></a></li>
+                <li><a href="#">장기출입신청<span></span></a></li>
+                <li><a href="#">찾아오시는 길</a></li>
+                <li><a href="#">관련사이트</a></li>
+            </ul>
+        </div>
+        <div>
+            <img src="https://www.posco.co.kr/docs/kor7/jsp/resources/images/common/ico_mediacenter.png">
+            <img src="https://img.icons8.com/?size=100&id=37326&format=png&color=1A1A1A" />
+            <img src="https://img.icons8.com/?size=100&id=106163&format=png&color=1A1A1A" />
+            <img src="https://img.icons8.com/?size=100&id=32292&format=png&color=1A1A1A" />
+            <img src="https://img.icons8.com/?size=100&id=118638&format=png&color=1A1A1A" />
+        </div>
+        <div>
+            <select>
+                <option>포스코그룹 바로가기 </option>
+                <option>포스코 홀딩스 </option>
+                <option>철강 </option>
+                <option>포스코 스틸리온 </option>
+            </select>
+            <img src="https://www.posco.co.kr/docs/kor7/jsp/resources/images/common/wamark_250819.png">
+        </div>
+    </footer>
+    <address>
+        <ul>
+            <li><a href="#">이용약관</a></li>
+            <li><a href="#"><strong>개인정보처리방침</strong></a></li>
+            <li><a href="#">영상정보처리기기 운영 관리 방침</a></li>
+            <li><a href="#">사이트맵</a></li>
+            <li><a href="#">회원가입</a></li>
+            <li><a href="#">제증명 발급 확인</a></li>
+            <li><a href="#">지속 가능 경영보고서</a></li>
+        </ul>
+        <p>(우)37859, 경상북도 포항시 남구 동해안로 6261(포항시 남구 괴동동1)</p>
+        <p>대표전화: 054-220-0114, 02-3457-0114</p>
+        <p>Copyrights(C) 2023 POSCO. All Rights Reserved.</p>
+    </address>
+    <aside>
+        <div>
+        <img src="https://www.posco.co.kr/docs/kor7/jsp/resources/images/common/mediacenter_icon.png">
+        </div>
+        <div>
+            <img src="https://www.posco.co.kr/docs/kor7/jsp/resources/images/common/link_banner_esg.png">
+            <small>지속가능경영<br>보고서</small>
+            <img src="https://www.posco.co.kr/docs/kor7/jsp/resources/images/common/quick_close.png">
+        </div>
+    </aside>
+</body>
